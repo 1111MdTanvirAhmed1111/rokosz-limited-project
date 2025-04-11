@@ -1,7 +1,5 @@
 import TeamCard from "./team-card"
 
-
-
 export default function TeamSection() {
   const teamMembers = [
     {

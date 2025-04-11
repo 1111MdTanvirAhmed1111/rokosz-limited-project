@@ -4,26 +4,8 @@ import { Github, Twitter, Linkedin, Instagram, Dribbble } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
-interface SocialLink {
-  platform: string
-  url: string
-}
-
-interface TeamMember {
-  id: number
-  name: string
-  role: string
-  expertise: string[]
-  image: string
-  social: SocialLink[]
-}
-
-interface TeamCardProps {
-  member: TeamMember
-}
-
-export default function TeamCard({ member }: TeamCardProps) {
-  const getSocialIcon = (platform: string) => {
+export default function TeamCard({ member }) {
+  const getSocialIcon = (platform) => {
     switch (platform) {
       case "twitter":
         return <Twitter className="h-4 w-4" />

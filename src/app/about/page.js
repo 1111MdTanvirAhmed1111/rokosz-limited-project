@@ -1,12 +1,9 @@
 import React from 'react'
-import TeamSection from '@/components/team-section';
 
-function About() {
+function page() {
   return (
-    <div className='dark'>
-       <TeamSection />
-    </div>
+    <div>page</div>
   )
 }
 
-export default About
+export default page
