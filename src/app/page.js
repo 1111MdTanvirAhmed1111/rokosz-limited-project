@@ -1,25 +1,58 @@
 import { Button } from "@/components/ui/button"
-
+import { BsMouse3 } from "react-icons/bs";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 function Home() {
   return (
     <div>
-      <div className="bg-black min-h-screen">
+      <div className="bg-black ">
         {/* Hero Section */}
-        <div className="relative h-[500px] bg-gradient-to-r from-gray-900 to-black flex items-center justify-center text-white text-center px-4">
+        <div className="relative h-screen bg-gradient-to-r from-gray-900 to-black flex items-center justify-center text-white text-center px-4">
           <div className="absolute inset-0 bg-black opacity-60"></div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight text-white">
               AFFORDABLE WEB DESIGN
             </h1>
-            <p className="text-lg md:text-xl opacity-90 mb-8 max-w-2xl mx-auto text-gray-300">
+            <p className="text-lg md:text-xl opacity-90  max-w-2xl mx-auto text-gray-300">
               Professional websites that drive results for your business
             </p>
             <Button className='bg-white text-black hover:bg-black hover:text-white border-1 cursor-pointer transition-all border-white' >
               GET STARTED
             </Button>
+            <div className="text-center w-full translate-y-10 animate-bounce">
+            <BsMouse3 className="text-5xl mx-auto "/>
+            </div>
           </div>
         </div>
+
+
+
+        <Accordion type="single" collapsible className="w-[80%] mx-auto ">
+      <AccordionItem value="item-1">
+        <AccordionTrigger>Is it accessible?</AccordionTrigger>
+        <AccordionContent>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2">
+        <AccordionTrigger>Is it styled?</AccordionTrigger>
+        <AccordionContent>
+          Yes. It comes with default styles that matches the other
+          components&apos; aesthetic.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-3">
+        <AccordionTrigger>Is it animated?</AccordionTrigger>
+        <AccordionContent>
+          Yes. It's animated by default, but you can disable it if you prefer.
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
 
         {/* What We Do Section */}
         <div className="max-w-5xl mx-auto py-16 px-4">
