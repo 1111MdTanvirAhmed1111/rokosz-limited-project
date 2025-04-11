@@ -148,7 +148,7 @@ export default function Preloader() {
 
   return (
     <div
-      className="fixed w-screen h-screen overflow-hidden bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#2a2a2a]"
+      className="fixed w-screen h-screen overflow-hidden bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#2a2a2a] z-[9999] flex items-center justify-center"
       onClick={handlePlayAudio}
       onMouseMove={(e) => {
         const particles = document.getElementById("tsparticles")
