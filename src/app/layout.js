@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} overflow-hidden ${geistMono.variable} antialiased bg-b`}
+        className={`${geistSans.variable} overflow-x-hidden ${geistMono.variable} antialiased bg-b`}
       >
        <div className="bg-black text-white flex-col flex overflow-x-auto space-x-4"> 
 

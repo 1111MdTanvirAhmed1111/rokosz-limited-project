@@ -1,10 +1,10 @@
 import React from 'react'
-import TeamCard from '@/components/team-card';
+import TeamSection from '@/components/team-section';
 
 function About() {
   return (
-    <div>
-        <TeamCard />
+    <div className='dark'>
+       <TeamSection />
     </div>
   )
 }
