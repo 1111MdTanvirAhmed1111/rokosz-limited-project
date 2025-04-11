@@ -21,11 +21,12 @@ function Home() {
             <p className="text-lg md:text-xl opacity-90  max-w-2xl mx-auto text-gray-300">
               Professional websites that drive results for your business
             </p>
-            <Button className='bg-white text-black hover:bg-black hover:text-white border-1 cursor-pointer transition-all border-white' >
+            <Button className='bg-white text-black my-5 hover:bg-black hover:text-white border-1 cursor-pointer transition-all border-white' >
               GET STARTED
             </Button>
-            <div className="text-center w-full translate-y-10 animate-bounce">
-            <BsMouse3 className="text-5xl mx-auto "/>
+            <div className="text-center w-full translate-y-8 animate-bounce">
+            <BsMouse3 className="text-5xl mx-auto block"/>
+            <span className="block animate-caret-blink translate-y-3">Scroll Down</span>
             </div>
           </div>
         </div>
