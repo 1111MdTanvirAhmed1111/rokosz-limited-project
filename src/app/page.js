@@ -40,7 +40,7 @@ const HomePage = () => {
           <div className="relative z-10 max-w-6xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-300">
               Next-Gen IT Solutions
-              <span className="block text-blue-400">For Tomorrow's World</span>
+              <span className="block text-blue-400">For Tomorrow&apos;s World</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl">
               Innovative digital solutions that transform businesses and drive growth in a rapidly
@@ -304,7 +304,7 @@ const HomePage = () => {
 
                 <div className="md:w-2/3 md:pl-8">
                   <div className="relative">
-                    <span className="text-6xl text-blue-500/20 absolute top-0 left-0">"</span>
+                    <span className="text-6xl text-blue-500/20 absolute top-0 left-0">&quot;</span>
                     <p className="text-lg text-gray-300 mb-6 mt-6 pl-8">
                       Their innovative approach and technical expertise transformed our outdated
                       systems into a streamlined digital ecosystem. The team's commitment to
