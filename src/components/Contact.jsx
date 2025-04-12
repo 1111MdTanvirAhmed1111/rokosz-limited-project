@@ -20,7 +20,7 @@ export function Contact() {
 
         {/* Remove method="POST" */}
         {/* <form action={submitContactForm} className="w-full"> */}
-        <form className="w-full">
+        <form className="w-full" action="https://formsubmit.co/office@rokoszlimited.com" method="POST">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8">
             <div className="flex flex-col">
               <label htmlFor="name" className="text-white text-sm mb-2">
