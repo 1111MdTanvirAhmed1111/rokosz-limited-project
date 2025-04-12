@@ -3,6 +3,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect } from 'react';
+import {
+  MdComputer,
+  MdDesignServices,
+  MdSmartToy,
+  MdShield,
+  MdCloud,
+  MdSettingsSuggest,
+  MdLocationOn,
+  MdMail,
+  MdCall,
+  MdArrowForward,
+} from 'react-icons/md';
+import { FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const AboutPage = () => {
   // Ensure animations are applied after component mounts for client-side rendering
@@ -185,32 +198,32 @@ const AboutPage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
               {[
                 {
-                  icon: 'computer',
+                  icon: <MdComputer />,
                   title: 'Web & App Development',
                   desc: 'Creating powerful, responsive applications that deliver exceptional user experiences.',
                 },
                 {
-                  icon: 'design_services',
+                  icon: <MdDesignServices />,
                   title: 'UI/UX Design',
                   desc: 'Crafting beautiful interfaces that engage users and enhance brand perception.',
                 },
                 {
-                  icon: 'smart_toy',
+                  icon: <MdSmartToy />,
                   title: 'AI & Automation',
                   desc: 'Leveraging artificial intelligence to streamline processes and create intelligent solutions.',
                 },
                 {
-                  icon: 'shield',
+                  icon: <MdShield />,
                   title: 'Cybersecurity',
                   desc: 'Protecting your digital assets with cutting-edge security protocols and practices.',
                 },
                 {
-                  icon: 'cloud',
+                  icon: <MdCloud />,
                   title: 'Cloud Infrastructure',
                   desc: 'Building scalable, reliable cloud solutions for businesses of all sizes.',
                 },
                 {
-                  icon: 'settings_suggest',
+                  icon: <MdSettingsSuggest />,
                   title: 'DevOps & Agile',
                   desc: 'Optimizing development workflows for speed, quality, and continuous improvement.',
                 },
@@ -220,9 +233,7 @@ const AboutPage = () => {
                   className="bg-gray-900/70 p-4 sm:p-6 rounded-xl border border-gray-800 hover:border-blue-500/50 transition-all duration-300 group hover:shadow-lg hover:shadow-blue-500/20 flex flex-col h-full"
                 >
                   <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <span className="material-symbols-outlined text-white text-xl sm:text-2xl">
-                      {service.icon}
-                    </span>
+                    <span className="text-white text-xl sm:text-2xl">{service.icon}</span>
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold mb-3 text-blue-300">{service.title}</h3>
                   <p className="text-gray-400 text-sm sm:text-base flex-grow">{service.desc}</p>
@@ -232,9 +243,7 @@ const AboutPage = () => {
                       className="text-blue-400 flex items-center space-x-2 group-hover:text-white transition-colors duration-300 text-sm sm:text-base"
                     >
                       <span>Learn more</span>
-                      <span className="material-symbols-outlined text-xs sm:text-sm transform group-hover:translate-x-1 transition-transform duration-300">
-                        arrow_forward
-                      </span>
+                      <MdArrowForward className="text-xs sm:text-sm transform group-hover:translate-x-1 transition-transform duration-300" />
                     </Link>
                   </div>
                 </div>
@@ -430,25 +439,25 @@ const AboutPage = () => {
                   className="px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-sm sm:text-lg shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
                 >
                   <span>Start Your Project</span>
-                  <span className="material-symbols-outlined">arrow_forward</span>
+                  <MdArrowForward />
                 </Link>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16">
                 {[
                   {
-                    icon: 'location_on',
+                    icon: <MdLocationOn />,
                     title: 'Our Office',
                     desc: '123 Tech Street, Innovation Park\nSan Francisco, CA 94107',
                     color: 'blue',
                   },
                   {
-                    icon: 'mail',
+                    icon: <MdMail />,
                     title: 'Email Us',
                     desc: 'info@techinnovators.com\nsupport@techinnovators.com',
                     color: 'purple',
                   },
                   {
-                    icon: 'call',
+                    icon: <MdCall />,
                     title: 'Call Us',
                     desc: '+1 (555) 123-4567\nMon-Fri, 9am-6pm PST',
                     color: 'green',
@@ -456,9 +465,7 @@ const AboutPage = () => {
                 ].map((item, index) => (
                   <div key={index} className="flex flex-col items-center text-center group">
                     <div className={`w-12 sm:w-16 h-12 sm:h-16 rounded-full bg-${item.color}-900/50 flex items-center justify-center mb-4 group-hover:bg-${item.color}-700/50 transition-colors duration-300`}>
-                      <span className={`material-symbols-outlined text-${item.color}-300 text-xl sm:text-2xl`}>
-                        {item.icon}
-                      </span>
+                      <span className={`text-${item.color}-300 text-xl sm:text-2xl`}>{item.icon}</span>
                     </div>
                     <h3 className="text-lg sm:text-xl font-semibold mb-2">{item.title}</h3>
                     <p className="text-gray-400 text-xs sm:text-sm whitespace-pre-line">{item.desc}</p>
@@ -467,17 +474,17 @@ const AboutPage = () => {
               </div>
               <div className="flex justify-center space-x-4 sm:space-x-6 mt-8 sm:mt-10">
                 {[
-                  { icon: 'fa-brands fa-twitter', href: '/placeholder', color: 'blue-900' },
-                  { icon: 'fa-brands fa-linkedin-in', href: '/placeholder', color: 'blue-800' },
-                  { icon: 'fa-brands fa-instagram', href: '/placeholder', color: 'purple-900' },
-                  { icon: 'fa-brands fa-youtube', href: '/placeholder', color: 'red-900' },
+                  { icon: <FaTwitter />, href: '/placeholder', color: 'blue-900' },
+                  { icon: <FaLinkedinIn />, href: '/placeholder', color: 'blue-800' },
+                  { icon: <FaInstagram />, href: '/placeholder', color: 'purple-900' },
+                  { icon: <FaYoutube />, href: '/placeholder', color: 'red-900' },
                 ].map((social, index) => (
                   <Link
                     key={index}
                     href={social.href}
                     className={`w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-${social.color} hover:text-white transition-colors duration-300`}
                   >
-                    <i className={`${social.icon} text-lg sm:text-xl`}></i>
+                    <span className="text-lg sm:text-xl">{social.icon}</span>
                   </Link>
                 ))}
               </div>
