@@ -53,7 +53,7 @@ export const metadata = {
     title: 'Rokosz Limited | Your Trusted IT Partner',
     description:
       'Explore cutting-edge IT services, expert consulting, and scalable digital solutions with Rokosz Limited.',
-    images: ['https://rokoszlimited.com/twitter-card.jpg'], // Replace with your actual Twitter card image
+    images: ['https://rokoszlimited.com/logo.png'], // Replace with your actual Twitter card image
     site: '@RokoszLimited', // Optional, if you have a Twitter account
   },
   robots: {
@@ -66,6 +66,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+
+      <head>
+        <link rel="icon" type="image/png" href="/logo.png" />
+      </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-b`}
       >
