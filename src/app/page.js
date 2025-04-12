@@ -307,7 +307,7 @@ const HomePage = () => {
                     <span className="text-6xl text-blue-500/20 absolute top-0 left-0">&quot;</span>
                     <p className="text-lg text-gray-300 mb-6 mt-6 pl-8">
                       Their innovative approach and technical expertise transformed our outdated
-                      systems into a streamlined digital ecosystem. The team's commitment to
+                      systems into a streamlined digital ecosystem. The team&apos;s commitment to
                       understanding our business needs and providing tailored solutions exceeded our
                       expectations.
                     </p>
@@ -331,7 +331,7 @@ const HomePage = () => {
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-10">
-              Let's discuss how our innovative IT solutions can help you achieve your digital
+              Let&apos;s discuss how our innovative IT solutions can help you achieve your digital
               transformation goals.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
