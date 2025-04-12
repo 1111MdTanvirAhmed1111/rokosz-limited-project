@@ -1,408 +1,359 @@
-'use client'; // Required for client-side interactivity (Accordion, animations)
+'use client'; // Enable client-side rendering for interactivity
 
-import Image from 'next/image';
 import Link from 'next/link';
-import { BsMouse3 } from 'react-icons/bs';
-import { Button } from '@/components/ui/button';
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
+  MdCode,
+  MdDevices,
+  MdDesignServices,
+  MdCloud,
+  MdSecurity,
+  MdPsychology,
+  MdShoppingBag,
+  MdSupportAgent,
+  MdHealthAndSafety,
+  MdPayments,
+  MdShoppingCart,
+  MdSchool,
+  MdFactory,
+  MdRealEstateAgent,
+  MdSearch,
+  MdEventNote,
+  MdBrush,
+  MdDeveloperMode,
+  MdBugReport,
+  MdRocketLaunch,
+  MdArrowBack,
+  MdArrowForward,
+} from 'react-icons/md';
 
-export default function Home() {
+const HomePage = () => {
   return (
-    <div className="bg-black text-white min-h-screen">
-      {/* Hero Section */}
-      <section className="relative h-screen bg-gradient-to-r from-gray-900 to-black flex items-center justify-center text-center px-4">
-        <div className="absolute inset-0 bg-black opacity-60"></div>
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight">
-            AFFORDABLE WEB DESIGN
-          </h1>
-          <p className="text-base sm:text-lg md:text-xl opacity-90 max-w-2xl mx-auto text-gray-300">
-            Professional websites that drive results for your business
-          </p>
-          <Button
-            asChild
-            className="bg-white text-black my-4 sm:my-5 hover:bg-black hover:text-white border border-white transition-all text-sm sm:text-base"
-          >
-            <Link href="/contact">GET STARTED</Link>
-          </Button>
-          <div className="text-center w-full translate-y-6 sm:translate-y-8 animate-bounce">
-            <BsMouse3 className="text-4xl sm:text-5xl mx-auto block" />
-            <span className="block animate-caret-blink translate-y-2 sm:translate-y-3 text-sm sm:text-base">
-              Scroll Down
-            </span>
+    <div id="webcrumbs">
+      <div className="w-full max-w-[1280px] mx-auto bg-black text-white font-sans">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden py-20 px-8">
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20"></div>
+            <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-blue-500/5 blur-3xl rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-purple-500/5 blur-3xl rounded-full transform translate-x-1/2 translate-y-1/2"></div>
           </div>
-        </div>
-      </section>
-
-      {/* Accordion Section */}
-      <section className="py-8 sm:py-12">
-        <Accordion type="single" collapsible className="w-[90%] sm:w-[80%] mx-auto">
-          <AccordionItem value="item-1">
-            <AccordionTrigger className="text-sm sm:text-base">Is it accessible?</AccordionTrigger>
-            <AccordionContent className="text-sm sm:text-base">
-              Yes. It adheres to the WAI-ARIA design pattern.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-2">
-            <AccordionTrigger className="text-sm sm:text-base">Is it styled?</AccordionTrigger>
-            <AccordionContent className="text-sm sm:text-base">
-              Yes. It comes with default styles that match the other components&apos; aesthetic.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger className="text-sm sm:text-base">Is it animated?</AccordionTrigger>
-            <AccordionContent className="text-sm sm:text-base">
-              Yes. It&apos;s animated by default, but you can disable it if you prefer.
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      </section>
-
-      {/* What We Do Section */}
-      <section className="max-w-5xl mx-auto py-12 sm:py-16 px-4 sm:px-6">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">WHAT WE DO</h2>
-        <p className="text-gray-400 text-center max-w-3xl mx-auto mb-12 sm:mb-16 text-sm sm:text-base">
-          We create beautiful, responsive websites that help businesses stand out online. Our team of
-          experts combine stunning design with powerful functionality to deliver websites that convert
-          visitors into customers.
-        </p>
-
-        {/* Marketing Stats Cards */}
-        <h3 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8">MARKETING THAT WORKS</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16">
-          {[
-            { stat: '98%', label: 'SATISFACTION RATE' },
-            { stat: '10x', label: 'RETURN ON INVESTMENT' },
-            { stat: '85%', label: 'CONVERSION RATE' },
-            { stat: '24/7', label: 'CUSTOMER SUPPORT' },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all border border-gray-700 text-center transform hover:-translate-y-1"
-            >
-              <h4 className="text-2xl sm:text-3xl font-bold text-white mb-2">{item.stat}</h4>
-              <p className="text-gray-400 text-xs sm:text-sm">{item.label}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Design Work Section */}
-        <div className="flex flex-col md:flex-row gap-6 sm:gap-8 items-center mb-12 sm:mb-16">
-          <div className="md:w-1/2">
-            <h3 className="text-xl sm:text-2xl font-bold mb-4">DESIGNS BUILT WITH PURPOSE</h3>
-            <p className="text-gray-400 mb-4 text-sm sm:text-base">
-              Every pixel matters. Our custom designs are crafted to showcase your brand and convert
-              visitors into loyal customers. We focus on creating intuitive user experiences that guide
-              your visitors exactly where you want them to go.
+          <div className="relative z-10 max-w-6xl mx-auto">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-300">
+              Next-Gen IT Solutions
+              <span className="block text-blue-400">For Tomorrow's World</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl">
+              Innovative digital solutions that transform businesses and drive growth in a rapidly
+              evolving technological landscape.
             </p>
-            <p className="text-gray-400 text-sm sm:text-base">
-              From responsive mobile designs to stunning desktop experiences, we ensure your website
-              looks amazing on every device.
-            </p>
-          </div>
-          <div className="md:w-1/2">
-            <Image
-              src="https://placehold.co/600x400/4B4B4B/FFFFFF.png?text=Web+Design+Example"
-              alt="Web Design Example"
-              width={600}
-              height={400}
-              className="rounded-lg shadow-lg w-full hover:opacity-90 transition-opacity"
-              quality={75}
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Insights Section */}
-      <section className="bg-gray-900 py-12 sm:py-16 px-4 sm:px-6">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 sm:mb-12">INSIGHTS</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            {[
-              {
-                img: 'https://placehold.co/600x300/4B4B4B/FFFFFF.png?text=SEO+Tips',
-                alt: 'SEO Tips',
-                title: '10 SEO STRATEGIES FOR SMALL BUSINESSES',
-                desc: 'Learn how to improve your website’s visibility and attract more organic traffic with these proven SEO techniques.',
-              },
-              {
-                img: 'https://placehold.co/600x300/4B4B4B/FFFFFF.png?text=UX+Design',
-                alt: 'UX Design',
-                title: 'EFFECTIVE UI/UX DESIGN PRINCIPLES',
-                desc: 'Discover the key principles that can transform your website’s user experience and boost conversion rates.',
-              },
-            ].map((insight, index) => (
-              <div
-                key={index}
-                className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1"
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link
+                href="/services"
+                className="px-8 py-3 bg-blue-600 rounded-md font-medium text-white hover:bg-blue-700 transform hover:translate-y-[-2px] transition-all duration-300 shadow-lg hover:shadow-blue-500/30"
               >
-                <Image
-                  src={insight.img}
-                  alt={insight.alt}
-                  width={600}
-                  height={300}
-                  className="w-full h-40 sm:h-48 object-cover"
-                  quality={75}
-                  loading="lazy"
-                />
-                <div className="p-4 sm:p-6">
-                  <h3 className="font-bold text-lg sm:text-xl mb-2">{insight.title}</h3>
-                  <p className="text-gray-400 text-sm sm:text-base">{insight.desc}</p>
-                  <Link
-                    href="/insights"
-                    className="mt-4 text-gray-300 font-medium hover:text-white transition-colors text-sm sm:text-base"
-                  >
-                    READ MORE →
-                  </Link>
-                </div>
-              </div>
-            ))}
+                Explore Services
+              </Link>
+              <Link
+                href="/contact"
+                className="px-8 py-3 bg-transparent border border-blue-500 rounded-md font-medium text-blue-400 hover:bg-blue-500/10 transform hover:translate-y-[-2px] transition-all duration-300"
+              >
+                Schedule Consultation
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+          {/* Next: "Add animated tech particles background using canvas or svg" */}
+        </section>
 
-      {/* Recent Design Section */}
-      <section className="max-w-5xl mx-auto py-12 sm:py-16 px-4 sm:px-6">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">MY RECENT DESIGNS</h2>
-        <p className="text-gray-400 text-center max-w-3xl mx-auto mb-10 sm:mb-12 text-sm sm:text-base">
-          Check out some of our recent client projects and see how we’ve helped transform their online
-          presence.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-10">
-          {[
-            {
-              img: 'https://placehold.co/400x300/4B4B4B/FFFFFF.png?text=Project+1',
-              alt: 'Project 1',
-              title: 'E-COMMERCE WEBSITE',
-              tags: 'Fashion | Responsive | E-commerce',
-            },
-            {
-              img: 'https://placehold.co/400x300/4B4B4B/FFFFFF.png?text=Project+2',
-              alt: 'Project 2',
-              title: 'CORPORATE WEBSITE',
-              tags: 'Business | Modern | Informative',
-            },
-            {
-              img: 'https://placehold.co/400x300/4B4B4B/FFFFFF.png?text=Project+3',
-              alt: 'Project 3',
-              title: 'RESTAURANT WEBSITE',
-              tags: 'Food | Interactive | Booking',
-            },
-          ].map((project, index) => (
-            <div
-              key={index}
-              className="group rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all"
-            >
-              <div className="relative overflow-hidden">
-                <Image
-                  src={project.img}
-                  alt={project.alt}
-                  width={400}
-                  height={300}
-                  className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-                  quality={75}
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gray-700 bg-opacity-0 group-hover:bg-opacity-20 transition-all flex items-center justify-center">
+        {/* Services Section */}
+        <section className="py-20 px-8 bg-gray-950">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6">Our Core Services</h2>
+              <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
+              <p className="mt-6 text-gray-300 max-w-3xl mx-auto text-lg">
+                Comprehensive IT solutions tailored to elevate your business with cutting-edge
+                technology and expert implementation.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  icon: <MdCode />,
+                  title: 'Custom Software',
+                  desc: 'Tailored software solutions designed to address your unique business challenges.',
+                },
+                {
+                  icon: <MdDevices />,
+                  title: 'Web & Mobile Apps',
+                  desc: 'Responsive applications that deliver seamless experiences across all devices.',
+                },
+                {
+                  icon: <MdDesignServices />,
+                  title: 'UI/UX Design',
+                  desc: 'User-centered design that enhances engagement and satisfaction.',
+                },
+                {
+                  icon: <MdCloud />,
+                  title: 'Cloud Solutions',
+                  desc: 'Scalable cloud infrastructure for optimal performance and reliability.',
+                },
+                {
+                  icon: <MdSecurity />,
+                  title: 'Cybersecurity',
+                  desc: 'Robust security measures to protect your digital assets and data.',
+                },
+                {
+                  icon: <MdPsychology />,
+                  title: 'AI & Machine Learning',
+                  desc: 'Intelligent systems that automate processes and provide valuable insights.',
+                },
+                {
+                  icon: <MdShoppingBag />,
+                  title: 'E-Commerce',
+                  desc: 'Digital storefronts that drive conversions and enhance customer experience.',
+                },
+                {
+                  icon: <MdSupportAgent />,
+                  title: 'IT Consulting',
+                  desc: 'Strategic guidance to optimize your technology investments.',
+                },
+              ].map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 group hover:-translate-y-1"
+                >
+                  <span className="text-4xl text-blue-400 mb-4 group-hover:text-blue-300 transition-colors duration-300">
+                    {service.icon}
+                  </span>
+                  <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                  <p className="text-gray-400 mb-4">{service.desc}</p>
                   <Link
-                    href="/projects"
-                    className="bg-gray-800 text-white py-2 px-4 rounded-md font-medium opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 text-sm sm:text-base"
+                    href="/placeholder"
+                    className="text-blue-400 inline-flex items-center group-hover:text-blue-300 transition-colors duration-300"
                   >
-                    VIEW PROJECT
+                    Learn more
+                    <MdArrowForward className="ml-1 text-sm group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </div>
-              </div>
-              <div className="p-4">
-                <h3 className="font-bold text-base sm:text-lg">{project.title}</h3>
-                <p className="text-gray-400 text-xs sm:text-sm">{project.tags}</p>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <div className="text-center">
-          <Button
-            asChild
-            variant="outline"
-            className="border-2 border-gray-300 text-gray-300 hover:bg-gray-700 hover:text-white font-medium py-2 px-4 sm:px-6 rounded-md transition-colors duration-300 text-sm sm:text-base"
-          >
-            <Link href="/projects">VIEW ALL PROJECTS</Link>
-          </Button>
-        </div>
-      </section>
+          </div>
+          {/* Next: "Add a filter system to sort services by category" */}
+        </section>
 
-      {/* Design Process Section */}
-      <section className="bg-gray-900 py-12 sm:py-16 px-4 sm:px-6">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 sm:mb-12">OUR DESIGN PROCESS</h2>
-          <div className="flex flex-col md:flex-row gap-6 sm:gap-8 items-center mb-12 sm:mb-16">
-            <div className="md:w-1/2 order-2 md:order-1">
-              <div className="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-md">
-                <ol className="relative border-l border-gray-600 ml-3">
-                  {[
-                    {
-                      step: 'Discovery',
-                      desc: 'We learn about your business, goals, and target audience to create a strategic plan.',
-                    },
-                    {
-                      step: 'Design',
-                      desc: 'Our designers create wireframes and mockups based on your requirements.',
-                    },
-                    {
-                      step: 'Development',
-                      desc: 'We build your website with clean code, ensuring it’s responsive and fast.',
-                    },
-                    { step: 'Launch', desc: 'After thorough testing, we deploy your website and provide ongoing support.' },
-                  ].map((item, index) => (
-                    <li key={index} className="mb-6 sm:mb-8 ml-6">
-                      <span className="absolute flex items-center justify-center w-6 sm:w-8 h-6 sm:h-8 bg-gray-700 rounded-full -left-3 sm:-left-4 text-white text-sm sm:text-base">
-                        {index + 1}
-                      </span>
-                      <h3 className="font-bold text-base sm:text-lg mb-1">{item.step}</h3>
-                      <p className="text-gray-400 text-sm sm:text-base">{item.desc}</p>
-                    </li>
-                  ))}
-                </ol>
-              </div>
+        {/* Industries Section */}
+        <section className="py-20 px-8 bg-black relative overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-500/5 blur-3xl rounded-full"></div>
+            <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-purple-500/5 blur-3xl rounded-full"></div>
+          </div>
+          <div className="max-w-6xl mx-auto relative z-10">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6">Industries We Serve</h2>
+              <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
+              <p className="mt-6 text-gray-300 max-w-3xl mx-auto text-lg">
+                Our expertise spans across various sectors, providing specialized solutions for
+                industry-specific challenges.
+              </p>
             </div>
-            <div className="md:w-1/2 order-1 md:order-2">
-              <div className="bg-gray-800 p-4 rounded-lg shadow-lg">
-                <div className="relative pb-[56.25%] h-0">
-                  <div className="absolute inset-0 bg-gray-700 rounded flex items-center justify-center">
-                    <div className="text-center">
-                      <span className="material-symbols-outlined text-4xl sm:text-5xl text-gray-400 mb-2">
-                        play_circle
-                      </span>
-                      <p className="text-gray-400 font-medium text-sm sm:text-base">Video Presentation</p>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {[
+                { icon: <MdHealthAndSafety />, name: 'Healthcare' },
+                { icon: <MdPayments />, name: 'Fintech' },
+                { icon: <MdShoppingCart />, name: 'E-Commerce' },
+                { icon: <MdSchool />, name: 'Education' },
+                { icon: <MdFactory />, name: 'Manufacturing' },
+                { icon: <MdRealEstateAgent />, name: 'Real Estate' },
+              ].map((industry, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-900/50 p-6 rounded-xl text-center hover:bg-gray-800 transition-all duration-300 border border-gray-800 hover:border-blue-500/30 group"
+                >
+                  <div className="flex justify-center mb-3">
+                    <span className="text-3xl text-blue-400 group-hover:text-blue-300 transition-colors duration-300">
+                      {industry.icon}
+                    </span>
+                  </div>
+                  <h3 className="font-medium">{industry.name}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* Next: "Add case studies from each industry" */}
+        </section>
+
+        {/* Process Section */}
+        <section className="py-20 px-8 bg-gray-950">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6">Our Process</h2>
+              <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
+              <p className="mt-6 text-gray-300 max-w-3xl mx-auto text-lg">
+                A transparent and collaborative approach to delivering successful projects.
+              </p>
+            </div>
+
+            <div className="relative">
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-900/50 hidden md:block"></div>
+
+              {[
+                {
+                  phase: 'Discovery',
+                  icon: <MdSearch />,
+                  desc: 'Understanding your business needs and objectives',
+                },
+                {
+                  phase: 'Planning',
+                  icon: <MdEventNote />,
+                  desc: 'Defining project scope, timeline, and resources',
+                },
+                {
+                  phase: 'Design',
+                  icon: <MdBrush />,
+                  desc: 'Creating intuitive and engaging user interfaces',
+                },
+                {
+                  phase: 'Development',
+                  icon: <MdDeveloperMode />,
+                  desc: 'Building robust and scalable solutions',
+                },
+                { phase: 'Testing', icon: <MdBugReport />, desc: 'Ensuring quality and performance' },
+                {
+                  phase: 'Deployment',
+                  icon: <MdRocketLaunch />,
+                  desc: 'Launching your solution to the world',
+                },
+              ].map((step, index) => (
+                <div key={index} className="relative mb-12 md:mb-24">
+                  <div
+                    className={`md:flex items-center ${index % 2 === 0 ? '' : 'flex-row-reverse'}`}
+                  >
+                    <div
+                      className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 text-right' : 'md:pl-12 text-left'}`}
+                    >
+                      <div
+                        className={`bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 transform hover:-translate-y-1`}
+                      >
+                        <h3 className="text-2xl font-bold mb-2 text-blue-400">{step.phase}</h3>
+                        <p className="text-gray-300">{step.desc}</p>
+                      </div>
+                    </div>
+
+                    <div className="absolute left-1/2 transform -translate-x-1/2 md:flex items-center justify-center hidden">
+                      <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center z-10 shadow-lg shadow-blue-600/20">
+                        <span className="text-xl">{step.icon}</span>
+                      </div>
+                    </div>
+
+                    <div className="md:w-1/2"></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* Next: "Add interactive timeline with progress animation" */}
+        </section>
+
+        {/* Stats/Testimonials Section */}
+        <section className="py-20 px-8 bg-black relative overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 to-purple-900/10"></div>
+          </div>
+          <div className="max-w-6xl mx-auto relative z-10">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6">Our Impact</h2>
+              <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+              {[
+                { value: '200+', label: 'Clients Worldwide' },
+                { value: '500+', label: 'Projects Completed' },
+                { value: '98%', label: 'Client Satisfaction' },
+                { value: '15+', label: 'Years of Excellence' },
+              ].map((stat, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-900/50 p-8 rounded-xl text-center border border-gray-800 hover:border-blue-500/30 transition-all duration-300 hover:transform hover:scale-105"
+                >
+                  <div className="text-4xl font-bold text-blue-400 mb-2">{stat.value}</div>
+                  <div className="text-gray-300">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-gray-900 p-8 rounded-xl border border-gray-800">
+              <div className="flex flex-col md:flex-row">
+                <div className="md:w-1/3 flex flex-col justify-center md:border-r md:border-gray-700 md:pr-8 mb-6 md:mb-0">
+                  <h3 className="text-2xl font-bold mb-4">What Our Clients Say</h3>
+                  <p className="text-gray-400">
+                    Discover why businesses trust us with their most challenging technology
+                    initiatives.
+                  </p>
+                  <div className="mt-6 flex gap-2">
+                    <button className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors duration-300">
+                      <MdArrowBack className="text-white" />
+                    </button>
+                    <button className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors duration-300">
+                      <MdArrowForward className="text-white" />
+                    </button>
+                  </div>
+                </div>
+
+                <div className="md:w-2/3 md:pl-8">
+                  <div className="relative">
+                    <span className="text-6xl text-blue-500/20 absolute top-0 left-0">"</span>
+                    <p className="text-lg text-gray-300 mb-6 mt-6 pl-8">
+                      Their innovative approach and technical expertise transformed our outdated
+                      systems into a streamlined digital ecosystem. The team's commitment to
+                      understanding our business needs and providing tailored solutions exceeded our
+                      expectations.
+                    </p>
+                    <div className="flex items-center pl-8">
+                      <div className="w-12 h-12 bg-blue-500 rounded-full mr-4"></div>
+                      <div>
+                        <div className="font-bold">Sarah Johnson</div>
+                        <div className="text-gray-400 text-sm">CTO, InnovateTech Solutions</div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+          {/* Next: "Add testimonial carousel with client logos" */}
+        </section>
 
-      {/* Trusted Solution Section */}
-      <section className="max-w-5xl mx-auto py-12 sm:py-16 px-4 sm:px-6">
-        <div className="flex flex-col md:flex-row gap-8 sm:gap-12 items-center">
-          <div className="md:w-1/2">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-6">A TRUSTED SOLUTION</h2>
-            <div className="bg-gray-800 p-4 sm:p-6 rounded-lg mb-6 sm:mb-8">
-              <h3 className="font-bold text-lg sm:text-xl mb-4">KEY BENEFITS:</h3>
-              <ul className="space-y-3">
-                {[
-                  'Responsive design that works on all devices',
-                  'SEO-friendly structure for better visibility',
-                  'Fast loading speeds for better user experience',
-                  'Easy-to-use content management system',
-                ].map((benefit, index) => (
-                  <li key={index} className="flex items-start">
-                    <svg
-                      className="h-5 sm:h-6 w-5 sm:w-6 mr-2 flex-shrink-0 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-sm sm:text-base">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <Button
-              asChild
-              className="bg-gray-700 hover:bg-gray-600 text-white font-medium py-2 sm:py-3 px-6 sm:px-8 rounded-md transition duration-300 transform hover:scale-105 text-sm sm:text-base"
-            >
-              <Link href="/contact">CONTACT US</Link>
-            </Button>
-          </div>
-          <div className="md:w-1/2">
-            <Image
-              src="https://placehold.co/600x400/4B4B4B/FFFFFF.png?text=Happy+Clients"
-              alt="Happy Clients"
-              width={600}
-              height={400}
-              className="rounded-lg shadow-lg w-full hover:opacity-90 transition-opacity"
-              quality={75}
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="bg-black py-12 sm:py-16 px-4 sm:px-6">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 sm:mb-12">WHAT PEOPLE SAY</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            {[
-              {
-                initials: 'JD',
-                name: 'JOHN DAVIS',
-                title: 'CEO, Tech Solutions Inc.',
-                quote:
-                  'The website they created for us exceeded our expectations. It’s not only beautiful but also brought in a 40% increase in leads within the first month. Highly recommended!',
-              },
-              {
-                initials: 'SM',
-                name: 'SARAH MILLER',
-                title: 'Marketing Director, Retail Brand',
-                quote:
-                  'Working with this team was a pleasure from start to finish. They listened to our needs and delivered a website that perfectly represents our brand. The results speak for themselves!',
-              },
-            ].map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-gray-800 p-4 sm:p-6 rounded-lg hover:bg-gray-700 transition-colors"
+        {/* CTA Section */}
+        <section className="py-20 px-8 bg-gradient-to-r from-blue-900 to-purple-900">
+          <div className="max-w-6xl mx-auto text-center">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-10">
+              Let's discuss how our innovative IT solutions can help you achieve your digital
+              transformation goals.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                href="/contact"
+                className="px-8 py-4 bg-white text-blue-900 rounded-md font-medium hover:bg-gray-100 transform hover:translate-y-[-2px] transition-all duration-300 shadow-lg hover:shadow-white/30"
               >
-                <div className="flex items-center mb-4">
-                  <div className="h-10 sm:h-12 w-10 sm:w-12 rounded-full bg-gray-700 flex items-center justify-center text-lg sm:text-xl font-bold mr-4">
-                    {testimonial.initials}
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-base sm:text-lg">{testimonial.name}</h3>
-                    <p className="text-gray-400 text-xs sm:text-sm">{testimonial.title}</p>
-                  </div>
-                </div>
-                <p className="text-gray-300 text-sm sm:text-base">{testimonial.quote}</p>
-                <div className="mt-4 flex">
-                  <span className="text-gray-300 text-sm sm:text-base">★★★★★</span>
-                </div>
-              </div>
-            ))}
+                Start Your Project
+              </Link>
+              <Link
+                href="/contact"
+                className="px-8 py-4 bg-transparent border border-white rounded-md font-medium text-white hover:bg-white/10 transform hover:translate-y-[-2px] transition-all duration-300"
+              >
+                Schedule a Call
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-gray-900">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">READY TO TRANSFORM YOUR ONLINE PRESENCE?</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto mb-6 sm:mb-8 text-base sm:text-lg">
-            Let’s create a website that not only looks amazing but drives real business results. Contact
-            us today for a free consultation.
-          </p>
-          <Button
-            asChild
-            className="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 sm:py-4 px-8 sm:px-10 rounded-md text-base sm:text-lg transition duration-300 transform hover:scale-105 shadow-lg"
-          >
-            <Link href="/contact">GET STARTED TODAY</Link>
-          </Button>
-        </div>
-      </section>
+          {/* Next: "Add a quick contact form within this section" */}
+        </section>
+      </div>
     </div>
   );
-}
+};
+
+export default HomePage;
