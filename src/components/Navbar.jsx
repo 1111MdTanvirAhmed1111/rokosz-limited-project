@@ -23,9 +23,9 @@ function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen)
 
   return (
-    <div className="w-full sticky bg-gradient-to-r from-[#0f0f0f] via-[#1a1a1a] to-[#121212] shadow-xl border-b-2 border-white z-50">
+    <div className="w-full fixed bg-gradient-to-r from-[#0f0f0f] via-[#1a1a1a] to-[#121212] shadow-xl border-b-2 border-white z-50">
       <div className="w-[97%] mx-auto sticky top-0 z-50">
-        <div className={`flex justify-between items-center px-6 py-2 ${inter.className} animate-slideUp`}>
+        <div className={`flex justify-between items-center px-6 py-3 ${inter.className} animate-slideUp`}>
           {/* Logo / Brand */}
           <div className="flex items-center space-x-3">
             <Image src="/logo_text.png" alt="Logo" width={155} height={155} />
