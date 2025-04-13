@@ -28,10 +28,8 @@ function Navbar() {
         <div className={`flex justify-between items-center px-6 py-2 ${inter.className} animate-slideUp`}>
           {/* Logo / Brand */}
           <div className="flex items-center space-x-3">
-            <Image src="/logo.png" alt="Logo" width={45} height={45} />
-            <span className={`text-xl text-white font-semibold tracking-wide ${spaceGrotesk.className}`}>
-              Rokosz
-            </span>
+            <Image src="/logo_text.png" alt="Logo" width={45} height={45} />
+          
           </div>
 
           {/* Desktop Nav */}
